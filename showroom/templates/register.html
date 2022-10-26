@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page </title>
+  <!-- Font Icon -->
+<link rel="stylesheet" href="{% static 'reg/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+<!-- Main css -->
+<link rel="stylesheet" href="{% static 'reg/css/style.css' %}">
+
+
+</head>
+<body>
+    
+  <div class="main">
+    <section class="signup">
+        <!--<img src="images/R.jfif" alt="">--> 
+        <div class="container">
+            <div class="signup-content">
+                {% if messages %}
+ {% for msg in messages %}
+ <h2>{{msg}}</h2>
+ 
+ {% endfor %}
+ {% endif %}
+                <form action="{% url 'register.html' %}" method="POST" id="signup-form" class="signup-form">
+                    {% csrf_token %}
+                    <h2 class="form-title">Create account</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-input" name="username" id="uname" placeholder="User Name" pattern="^[A-Za_z][A-Za-z -]+$" title="The name should begin with capital letter Followed by uppercase or lowercase" class="form-control" placeholder="Enter your user name"  required/>
+                    </div>
+                     <div class="form-group">
+                        <input type="text" class="form-input" name="first_name" id="fname" placeholder="First Name"pattern="^[A-Za_z][A-Za-z -]+$" title="The name should begin with capital letter Followed by uppercase or lowercase" class="form-control" placeholder="Enter your first name" required/>
+                    </div>
+                     <div class="form-group">
+                        <input type="text" class="form-input" name="last_name" id="lname" placeholder="last Name"pattern="^[A-Za_z][A-Za-z -]+$" title="The name should begin with capital letter Followed by uppercase or lowercase" class="form-control" placeholder="Enter your last name" required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" name="email" id="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="must enter a valid email address" required style="    width:70%;" placeholder="Enter your email" required/>
+                    </div>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="password" class="form-input" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" placeholder="Password" required/>
+                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-input" name="cpassword" id="re_password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" placeholder="Repeat your password"required/>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="agree-term" id="agree-term" class="agree-term"required />
+                        <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
+                    </div>
+                    
+                </form>
+                
+                <p class="loginhere">
+                    Have already an account ? <a href="{% url 'login' %}" class="loginhere-link">Login here</a>
+                </p>
+            </div>
+        </div>
+    </section>
+   
+
+</div>
+ <!-- JS -->
+ <script src="{% static 'reg/vendor/jquery/jquery.min.js' %}"></script>
+ <script src="{% static 'reg/js/main.js' %}"></script>
+ <!-- {% if messages %}
+ {% for msg in messages %}
+ <h2>{{msg}}</h2>
+ 
+ {% endfor %}
+ {% endif %} -->
+</body>
+</html>
+
+{% endblock %}
