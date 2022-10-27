@@ -34,18 +34,18 @@
                         <input type="text" class="form-input" name="username" id="uname" placeholder="User Name" pattern="^[A-Za_z][A-Za-z -]+$" title="The name should begin with capital letter Followed by uppercase or lowercase" class="form-control" placeholder="Enter your user name"  required/>
                     </div>
                      <div class="form-group">
-                        <input type="text" class="form-input" name="first_name" id="fname" placeholder="First Name"pattern="^[A-Za_z][A-Za-z -]+$" title="The name should begin with capital letter Followed by uppercase or lowercase" class="form-control" placeholder="Enter your first name" required/>
+                        <input type="text" class="form-input" name="first_name" id="fname" placeholder="First Name"pattern="^[A-Za_z][A-Za-z -]+$" title="The name should begin with capital letter Followed by uppercase or lowercase" class="form-control" placeholder="Enter your first name"  required/>
                     </div>
                      <div class="form-group">
                         <input type="text" class="form-input" name="last_name" id="lname" placeholder="last Name"pattern="^[A-Za_z][A-Za-z -]+$" title="The name should begin with capital letter Followed by uppercase or lowercase" class="form-control" placeholder="Enter your last name" required/>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-input" name="email" id="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="must enter a valid email address" required style="    width:70%;" placeholder="Enter your email" required/>
+                        <input type="email" class="form-input" name="email" id="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="must enter a valid email address"  placeholder="Enter your email" required/>
                     </div>
                     {% csrf_token %}
                     <div class="form-group">
                         <input type="password" class="form-input" name="password" id="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" placeholder="Password" required/>
-                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        <!-- <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span> -->
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-input" name="cpassword" id="re_password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" placeholder="Repeat your password"required/>

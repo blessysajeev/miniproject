@@ -82,7 +82,7 @@ def register(request):
                 user.save();
             print("User Created");
             messages.success(request,"successfully registered")
-            # return redirect('login')
+            return redirect('login')
         else:
             messages.info(request,"password not match")
             return redirect('register.html')
@@ -106,9 +106,9 @@ def login(request):
             request.session['username'] = username
             
 
-            return redirect('home.html')
+            return redirect('index.html')
         else:
-            print(3)
+            # print(3)
             messages.info(request,"invalid values")
             return redirect('login')     
     return render(request,'login.html')    

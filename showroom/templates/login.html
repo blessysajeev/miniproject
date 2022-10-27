@@ -1,7 +1,7 @@
 <!-- {% extends 'base.html' %} -->
 {% load static %}
 {% block content %}
-{% include 'alert.html' %}
+<!-- {% include 'alert.html' %} -->
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -15,17 +15,18 @@
 
 </head>
 <body>
-  <script>
-    setTimeout(function(){
-      if ($('#msg').length > 0){
-        $('#msg').remove();
-      }
-    },4000)
-  </script>
+
     <div>
-       <a href="{% url 'index' %}" class="nav-link"><b>BACK</b></a>
+       <a href="{% url 'index.html' %}" class="nav-link"><b>BACK</b></a>
     </div>
+
   <div class="main">
+    {% if messages %}
+    {% for msg in messages %}
+    <h2>{{msg}}</h2>
+    
+    {% endfor %}
+    {% endif %}
     <section class="signup">
         <!--<img src="images/R.jfif" alt=""> --> 
         <div class="container">
@@ -48,10 +49,13 @@
                     </div>
                 </form>
                 
-                <p >
+                <!-- <p >
                   Create a new account ? <a href="{% url 'register.html' %}" class="loginhere-link">Register here</a>
-                  </p>
-                  <p>
+                  </p> -->
+                  <p class="loginhere">
+                    Create a new account ? <a href="{% url 'register.html' %}" class="loginhere-link">Register here</a> <br>
+               
+                  
                   <a href="{% url 'password_reset' %}" class="loginhere-link">FORGET PASSWORD</a>
                 
                 </p>
