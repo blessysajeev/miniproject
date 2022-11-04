@@ -70,7 +70,7 @@
 	  </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap ftco-degree-bg" style="background-image: url('static/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap ftco-degree-bg" style="background-image: url('{% static 'images/car_2.jpeg' %}');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
@@ -92,38 +92,46 @@
       </div>
     </div>
 
-    <!-- <section class="ftco-section ftco-no-pt bg-light">
+    <section class="ftco-section ftco-no-pt bg-light">
     	<div class="container">
     		<div class="row no-gutters">
     			<div class="col-md-12	featured-top">
     				<div class="row no-gutters">
 	  					<div class="col-md-4 d-flex align-items-center">
 	  						<form action="#" class="request-form ftco-animate bg-primary">
-		          		<h2>Book your car</h2>
+		          		<h2>Book a testdrive</h2>
 			    				<div class="form-group">
-			    					<label for="" class="label">Pick-up location</label>
-			    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+			    					<label for="" class="label">Select city or picode</label>
+			    					<input type="text" class="form-control" placeholder="">
 			    				</div>
 			    				<div class="form-group">
-			    					<label for="" class="label">Drop-off location</label>
-			    					<input type="text" class="form-control" placeholder="City, Airport, Station, etc">
+			    					<label for="" class="label">Select car model</label>
+			    					<input type="text" class="form-control" placeholder="">
+			    				</div>
+                                <div class="form-group">
+			    					<label for="" class="label">Test drive at</label>
+			    					<input type="text" class="form-control" placeholder="">
 			    				</div>
 			    				<div class="d-flex">
 			    					<div class="form-group mr-2">
-			                <label for="" class="label">Pick-up date</label>
+			                <label for="" class="label">select date</label>
 			                <input type="text" class="form-control" id="book_pick_date" placeholder="Date">
 			              </div>
-			              <div class="form-group ml-2">
+			              <!-- <div class="form-group ml-2">
 			                <label for="" class="label">Drop-off date</label>
 			                <input type="text" class="form-control" id="book_off_date" placeholder="Date">
-			              </div>
+			              </div> -->
+                          <div class="form-group">
+                            <label for="" class="label">Pick-up time</label>
+                            <input type="text" class="form-control" id="time_pick" placeholder="Time">
+                          </div>
 		              </div>
-		              <div class="form-group">
+		              <!-- <div class="form-group">
 		                <label for="" class="label">Pick-up time</label>
 		                <input type="text" class="form-control" id="time_pick" placeholder="Time">
-		              </div>
+		              </div> -->
 			            <div class="form-group">
-			              <input type="submit" value="Rent A Car Now" class="btn btn-secondary py-3 px-4">
+			              <input type="submit" value="Book TestDrive" class="btn btn-secondary py-3 px-4">
 			            </div>
 			    			</form>
 	  					</div>
@@ -156,16 +164,16 @@
 					            </div>      
 					          </div>
 					        </div>
-					        <p><a href="#" class="btn btn-primary py-3 px-4">Reserve Your Perfect Car</a></p>
+					        <p><a href="" class="btn btn-primary py-3 px-4">Add another testdrive</a></p>
 	  						</div>
 	  					</div>
 	  				</div>
 				</div>
   		</div>
-    </section> -->
+    </section>
 
 
-    <section class="ftco-section ftco-no-pt bg-light">
+    <!-- <section class="ftco-section ftco-no-pt bg-light">
     	<div class="container">
     		<div class="row justify-content-center">
           <div class="col-md-12 heading-section text-center ftco-animate mb-5">
@@ -180,21 +188,21 @@
               {% for i in result %}
     					<div class="item">
     						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" >
+		    					<div class="img rounded d-flex align-items-end" > -->
                     <!-- style="background-image: url(static/images/alto.jpg);" -->
-                    <img src="{{i.image.url}}" alt="" />
+                    <!-- <img src="{{i.image.url}}" alt="" />
 		    					</div>
 		    					<div class="text">
 		    						<h2 class="mb-0"><a href="#">{{i.name}}</a></h2>
 		    						<div class="d-flex mb-3">
-			    						<span class="cat">{{i.company}}</span>
+			    						<span class="cat">{{i.company}}</span> -->
 			    						<!-- <p class="price ml-auto">price start from|₹3.99 lakhs</p> -->
-		    						</div>
+		    						<!-- </div>
 		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book Now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
 		    					</div>
 		    				</div>
     					</div>
-              {% endfor %}
+              {% endfor %} -->
     					 <!-- <div class="item">
     						<div class="car-wrap rounded ftco-animate">
 		    					<div class="img rounded d-flex align-items-end" style="background-image: url(static/images/xl6.jpeg);">
@@ -235,15 +243,15 @@
 		    						</div>
 		    						<p class="d-flex mb-0 d-block align-items-center"><a href="#" class="btn btn-primary py-2 mr-2">Book Now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
 		    					</div> -->
-		    				</div>
+		    				<!-- </div>
     					</div>
     				</div>
     			</div>
     		</div>
     	</div>
-    </section>
+    </section> -->
 
-    <section class="ftco-section ftco-about">
+    <!-- <section class="ftco-section ftco-about">
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(static/images/about.jpg);">
@@ -251,16 +259,16 @@
 					<div class="col-md-6 wrap-about ftco-animate">
 	          <div class="heading-section heading-section-white pl-md-5">
 	          	<span class="subheading">About us</span>
-	            <h2 class="mb-4">Welcome to Carbook</h2>
+	            <h2 class="mb-4">Welcome to Carbook</h2> -->
 
-	            <p>Giving your car the service it deserves, our Service has an extensive service network that spans across more than 1800 cities in India, making it easily accessible for customers.Book a service appointment for your car at your nearest authorized service centre, and avail numerous benefits like quality service by certified and expert technicians, genuine car parts and accessories, transparent evaluation and technology-driven solutions. With stringent sanitisation and quality checks in place, we take good care of your car at our Service. Explore our range of services like Extended warranty, Roadside assistance to know more.</p>
+	            <!-- <p>Giving your car the service it deserves, our Service has an extensive service network that spans across more than 1800 cities in India, making it easily accessible for customers.Book a service appointment for your car at your nearest authorized service centre, and avail numerous benefits like quality service by certified and expert technicians, genuine car parts and accessories, transparent evaluation and technology-driven solutions. With stringent sanitisation and quality checks in place, we take good care of your car at our Service. Explore our range of services like Extended warranty, Roadside assistance to know more.</p> -->
 	            <!--<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>-->
-	            <p><a href="#" class="btn btn-primary py-3 px-4">Search Vehicle</a></p>
+	            <!-- <p><a href="#" class="btn btn-primary py-3 px-4">Search Vehicle</a></p>
 	          </div>
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<section class="ftco-section">
 			<div class="container">

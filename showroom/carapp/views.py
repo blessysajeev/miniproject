@@ -144,4 +144,10 @@ def change_password(request):
             return redirect('change_password')
     return render(request, 'change/change_password.html')
 
+def Cars(request):
+     return  render(request, 'cars.html')
+
+def testdrive(request):
+     return  render(request, 'testdrive.html')
+
     

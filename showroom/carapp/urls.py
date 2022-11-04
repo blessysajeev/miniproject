@@ -11,7 +11,9 @@ urlpatterns = [
     path('register/',views.register,name='register.html'),
     path('login/', views.login, name='login'),
     path('logout/',views.logout, name='logout'),
-    path('home/',views.home,name='home.html'), 
+    path('home/',views.home,name='home.html'),
+    path('cars/',views.Cars,name='cars'), 
+    path('testdrive/',views.testdrive,name='testdrive'), 
     # path('logout/',views.logout,name='logout'),
 
 

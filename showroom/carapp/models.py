@@ -1,4 +1,7 @@
-from django.db import models
+from django.db import models 
+# from django.contrib.auth.models import AbstractUser
+
+
 
 # Create your models here.
 class Vehicles(models.Model):
@@ -21,3 +24,9 @@ class Vehicles(models.Model):
 
     def _str_(self):
         return '{}'.format(self.name)
+
+
+
+
+    
+# class CustomUser(AbstractUser):
